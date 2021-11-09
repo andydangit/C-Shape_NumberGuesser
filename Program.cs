@@ -12,13 +12,7 @@ namespace NumberGuesser
 
             GetAppInfo(); // Run GetAppInfo function
 
-            // Ask the user name
-            Console.WriteLine("What is your name?");
-
-            // get user input
-            string inputName = Console.ReadLine();
-
-            Console.WriteLine("Hello {0}, let's play a game...", inputName );
+            GreetUser(); // Ask for users name greet
 
             while (true)
             {
@@ -113,6 +107,10 @@ namespace NumberGuesser
 
         }
 
+
+        /* add function to refactor code on top */ 
+
+        // Get and display app info  
         static void GetAppInfo()
         {
             // Set app vars
@@ -128,6 +126,19 @@ namespace NumberGuesser
 
             // reset text color 
             Console.ResetColor();
+        }
+
+        //Ask users name and greet 
+        static void GreetUser()
+        {
+            // Ask the user name
+            Console.WriteLine("What is your name?");
+
+            // get user input
+            string inputName = Console.ReadLine();
+
+            Console.WriteLine("Hello {0}, let's play a game...", inputName);
+
         }
     }
 }
