@@ -55,22 +55,14 @@ namespace NumberGuesser
                     // Match guess to correct number
                     if (guess != correctNumber)
                     {
-
+                        // Print Error message
                         PrintColorMessage(ConsoleColor.DarkGray, "Wrong number, please try again");
                     }
 
                 }
 
-                // Output sucess message
-
-                //Change text color
-                Console.ForegroundColor = ConsoleColor.DarkGray;
-
-                // Tell user it is the correct number
-                Console.WriteLine("Good job on guessing the number");
-
-                // Reset text color
-                Console.ResetColor();
+                // Print Success message
+                PrintColorMessage(ConsoleColor.DarkYellow, "Good job on guessing the number");
 
                 // Ask to play again 
                 Console.WriteLine("Play Again? [Y or N]");
