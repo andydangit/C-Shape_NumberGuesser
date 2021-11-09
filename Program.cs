@@ -23,6 +23,14 @@ namespace NumberGuesser
 
             //reset text color 
             Console.ResetColor();
+
+            //Ask the user name
+            Console.WriteLine("What is your name?");
+
+            // get user input
+            string input = Console.ReadLine();
+
+            Console.WriteLine("Hello {0}, let's play a game...", input );
         }
     }
 }
