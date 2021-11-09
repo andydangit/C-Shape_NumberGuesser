@@ -9,13 +9,13 @@ namespace NumberGuesser
            //Entry Point Method
         static void Main(string[] args)
         {
-            string name = "Andy Dang";
-            int age = 25;
-            var mood = "happy";
 
-            //Start Here //
-            Console.WriteLine(name + " is " + age);
-            Console.WriteLine("{0} is {1} and is {2}", name,age,mood);
+            // Set app vars
+            var appName = "Number Guesser";
+            var appVersion = "1.0.0";
+            var appAuthor = "Andy Dang";
+
+            Console.WriteLine("{0}: Version {1} by {2}", appName, appVersion, appAuthor );
         }
     }
 }
