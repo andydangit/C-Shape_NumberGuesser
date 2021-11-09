@@ -15,22 +15,32 @@ namespace NumberGuesser
             var appVersion = "1.0.0";
             var appAuthor = "Andy Dang";
 
-            //Change text color
+            // Change text color
             Console.ForegroundColor = ConsoleColor.DarkGreen;
 
-            //Write out app info
+            // Write out app info
             Console.WriteLine("{0}: Version {1} by {2}", appName, appVersion, appAuthor );
 
-            //reset text color 
+            // reset text color 
             Console.ResetColor();
 
-            //Ask the user name
+            // Ask the user name
             Console.WriteLine("What is your name?");
 
             // get user input
             string input = Console.ReadLine();
 
             Console.WriteLine("Hello {0}, let's play a game...", input );
+
+            // Init correct number
+            int correctNumber = 7;
+
+            // Init guess var
+            int guess = 0;
+
+            Console.WriteLine("Guess a number between 1 and 10");
+
+
         }
     }
 }
