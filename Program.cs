@@ -56,7 +56,7 @@ namespace NumberGuesser
                     //Change text color
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
 
-                    // Write out app info 
+                    // Tell user it is the wrong number
                     Console.WriteLine("Wrong number, please try again");
 
                     // Reset text color
@@ -70,7 +70,7 @@ namespace NumberGuesser
             //Change text color
             Console.ForegroundColor = ConsoleColor.DarkGray;
 
-            // Write out app info 
+            // Tell user it is the correct number
             Console.WriteLine("Wrong number, please try again");
 
             // Reset text color
