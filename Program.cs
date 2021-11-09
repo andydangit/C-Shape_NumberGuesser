@@ -41,14 +41,8 @@ namespace NumberGuesser
                     // Make sure its a number
                     if (!int.TryParse(input, out guess))
                     {
-                        //Change text color
-                        Console.ForegroundColor = ConsoleColor.DarkRed;
-
-                        // Tell user its not a number
-                        Console.WriteLine("Input Number only!!");
-
-                        // Reset text color
-                        Console.ResetColor();
+                        // Print error message
+                        PrintColorMessage(ConsoleColor.Red, "Input number only!!");
 
                         // Keep going 
                         continue;
@@ -61,14 +55,8 @@ namespace NumberGuesser
                     // Match guess to correct number
                     if (guess != correctNumber)
                     {
-                        //Change text color
-                        Console.ForegroundColor = ConsoleColor.DarkYellow;
 
-                        // Tell user it is the wrong number
-                        Console.WriteLine("Wrong number, please try again");
-
-                        // Reset text color
-                        Console.ResetColor();
+                        PrintColorMessage(ConsoleColor.DarkGray, "Wrong number, please try again");
                     }
 
                 }
@@ -139,6 +127,19 @@ namespace NumberGuesser
 
             Console.WriteLine("Hello {0}, let's play a game...", inputName);
 
+        }
+
+        // Print color message
+        static void PrintColorMessage(ConsoleColor color, string message )
+        {
+            //Change text color
+            Console.ForegroundColor = color;
+
+            // Tell user its not a number
+            Console.WriteLine(message);
+
+            // Reset text color
+            Console.ResetColor();
         }
     }
 }
